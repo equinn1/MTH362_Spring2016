@@ -1,0 +1,69 @@
+\section*{Convergence}
+\begin{definition*}[sequence] A \textit{sequence} is a function whose domain is $\mathbb{N}$.
+\end{definition*}
+\par\vspace{1 cm}
+\begin{definition*}[convergent sequence] A sequence ${x_n}$ in $\mathbb{R}$ \textit{converges} to $x$ if, for every $\epsilon>0$, there is an $N\in\mathbb{N}$ such that
+\[
+|x_n-x| , \epsilon\quad\mbox{whenever}\quad n\geq N
+\]
+\end{definition*}
+\begin{definition*}[Cauchy sequence] A sequence ${x_n}$ in $\mathbb{R}$ is said to be a \textit{Cauchy} sequence if, for every $\epsilon>0$, there is an $N\in\mathbb{N}$ such that
+\[
+|x_n-x_m| , \epsilon\quad\mbox{whenever}\quad n,m\geq N
+\]
+\end{definition*}
+\par\vspace{1 cm}
+\section*{Topology Review}
+\begin{definition*}[$\epsilon$-neighborhood] If $x\in\mathbb{R}$ and $\epsilon>0$, the $\epsilon$-neighborhood $V_{\epsilon}(x)$ is defined by 
+\[
+V_{\epsilon} = \left\{y\in\mathbb{R}\;:\; |x-y|<\epsilon\right\}
+\]
+\end{definition*}
+\par\vspace{1 cm}
+\begin{definition*}[limit point] A real number $x\in A$ is a \textit{limit point} of $A$ if for every $\epsilon>0$, $V_{\epsilon}(x)$ contains elements of $A$ other than $x$.
+\end{definition*}
+\par\vspace{1 cm}
+\begin{definition*}[isolated point] A element $x\in A$ is an \textit{isolated point} of $A$ if $x\in A$ and $x$ is not a limit point of $A$.
+\end{definition*}
+\par\vspace{1 cm}
+\begin{definition*}[open set] A set $A\subseteq\mathbb{R}$ is \textit{open} if, for every $a\in A$, there is an $\epsilon>0$ such that
+\[
+V_{\epsilon}(a)\subseteq A
+\]
+That is, there is an $\epsilon$-neighborhood of every element of $A$ that is contained entirely in $A$.
+\end{definition*}
+\par\vspace{1 cm}
+\begin{definition*}[closed set] A set $A\subseteq\mathbb{R}$ is \textit{closed} if it contains all of its limit points.
+\end{definition*}
+\par\vspace{1 cm}
+\begin{definition*}[closure] The \textit{closure} of a set $A\subseteq\mathbb{R}$ denoted by $\overline{A}$ is the union of $A$ and its limit points.
+\end{definition*}
+\par\vspace{1 cm}
+\begin{definition*}[compact set] A set $A\subseteq\mathbb{R}$ is \textit{compact} if every sequence in $A$ has a convergent subsequence whose limit is in $A$.
+\end{definition*}
+\par\vspace{1 cm}
+\begin{definition*}[perfect set] A set $A\subseteq\mathbb{R}$ is \textit{perfect} if it is closed and has no isolated points.
+\end{definition*}
+\par\vspace{1 cm}
+\begin{definition*}[bounded set] A set $A\subseteq\mathbb{R}$ is \textit{bounded} if there exists an $M>0$ such that
+\[
+|a| \leq M\quad\mbox{for all}\quad a\in A
+\]
+\end{definition*}
+\par\vspace{1 cm}
+\begin{definition*}[separated sets] Two nonempty sets $A,B\subseteq\mathbb{R}$ are \textit{separated} if
+\[
+A\cap\overline{B} = \emptyset = \overline{A}\cap B
+\]
+\end{definition*}
+\par\vspace{1 cm}
+\begin{definition*}[disconnected set] A set $E\subseteq\mathbb{R}$ is \textit{disconnected} if it can be written as 
+\[
+E=A\cup B
+\]
+where $A$ and $B$ are nonempty separated sets.
+\end{definition*}
+\par\vspace{1 cm}
+\begin{definition*}[connected set] A set $A\subseteq\mathbb{R}$ is \textit{connected} if it is not disconnected.
+\end{definition*}
+
