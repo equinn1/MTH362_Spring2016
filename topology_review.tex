@@ -66,4 +66,11 @@ where $A$ and $B$ are nonempty separated sets.
 \par\vspace{1 cm}
 \begin{definition*}[connected set] A set $A\subseteq\mathbb{R}$ is \textit{connected} if it is not disconnected.
 \end{definition*}
-
+\par\vspace{1 cm}
+\begin{theorem*} A set $A\subseteq\mathbb{R}$ is open if and only if its compliment $A^c$ is closed.
+\end{theorem*}
+\begin{proof}
+$(\Rightarrow)$ Let $A\subseteq\mathbb{R}$ be open.  Suppose for the sake of contradiction that $a\in A$ is a limit point of $A^c$. By definition, for every $\epsilon>0$, $V_{\epsilon}(a)$ contains points of $A^c$.  This means that no $\epsilon$-neighborhood of $a$ is entirely contained in $A$, contradicting the assumption that $A$ is open.
+\par\vspace{0.3 cm}\noindent
+$(\Leftarrow)$ Now suppose $A\subseteq\mathbb{R}$ with $A^c$ closed.  Let $a$ be an element of $(A^c)^c=A$.  By hypothesis, $A^c$ is closed, so $a$ cannot be a limit point of $A^c$ because $a\notin A$.  By definition, this means there must be an $\epsilon>0$ such that $V_{\epsilon}(a)$ contains no points of $A^c$.  Therefore, $V_{\epsilon}(a)\subseteq A$.  Since $a$ was arbitrarily chosen, we can find an $\epsilon$-neighborhood of every element of $A$ that is entirely contained in $A$, so by definition $A$ is open.  
+\end{proof}
