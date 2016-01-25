@@ -1,0 +1,36 @@
+\documentclass[12pt]{amsbook}
+%\usepackage{amssymb}
+%this is a comment
+\theoremstyle{plain}    
+\numberwithin{section}{chapter}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{definition*}{Definition}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{problem*}{Problem}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{solution}{Solution}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{remark}{Remark}
+%\newcommand{\norm}[1]{\left|\left|#1\right|\right|}
+\begin{document}
+\title{MTH362 Spring 2016}
+\maketitle
+\author{B. Honohan, A. Johnson, S. McAlister, F. Mooney, K. O'Donnell, E. Quinn, R. Selbert, E. Wiley}
+\numberwithin{equation}{section}
+\setcounter{tocdepth}{4} 
+\tableofcontents
+\mainmatter 
+\chapter{Review}
+\section{Preliminaries and Definitions}
+\input{MTH362_preliminaries_and_definitions}
+\input{topology_review}
+\chapter{Homework Problems}
+\section{Week 1 Homework (assignment 1)}
+\input{MTH362-1_assignments}
+\section{Week 1 Homework (assignment 2)}
+\input{MTH362-1_assignments2}
+\end{document}
+
+
+
+

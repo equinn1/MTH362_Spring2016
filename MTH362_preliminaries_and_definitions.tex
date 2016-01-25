@@ -1,0 +1,123 @@
+\begin{definition*}[binary operation] A \textbf{binary operation} on a set $S$ is a function from $S\times S$ into $S$.
+\par\vspace{0.3 cm}
+Examples of binary operations:
+\begin{itemize} 
+\item $+:\mathbb{N}\times\mathbb{N} \rightarrow \mathbb{N}$ Addition of natural numbers
+\item $\cdot : \mathbb{N}\times\mathbb{N} \rightarrow \mathbb{N}$ Multiplication of natural numbers
+\end{itemize}
+\par
+\end{definition*}
+\par\vspace{1 cm}
+\begin{definition*}[group] A \textbf{group} consists of:
+\begin{itemize} 
+\item A set $G$
+\item A binary operation $+ : G\times G\rightarrow G$ with the following properties:
+\par
+\begin{tabular}{ll}
+$x+(y+z)=(x+y)+z\;\forall x,y,z\in G$ & (associativity)\\
+$\exists 0\in G\;\mbox{ such that } a+0=0+a=a\;\forall a\in G$ & (identity)\\
+$\forall a\in G\;\exists\;a^{-1}\;\mbox{ such that }\; a+a^{-1}=a^{-1}+a=0$ & (inverse)\\ 
+\end{tabular}
+\end{itemize}
+\end{definition*}
+\par\vspace{1 cm}
+\begin{definition*}[field] A \textbf{field} consists of:
+\begin{itemize} 
+\item A set $F$
+\item A binary operation $+ : F\times F\rightarrow F$ with the following properties:
+\par
+\begin{tabular}{ll}
+$x+y=y+x\;\forall x,y\in F$ & (additive commutativity)\\
+$x+(y+z)=(x+y)+z\;\forall x,y,z\in F$ & (additive associativity)\\
+$\exists 0\in F\;\mbox{ such that } a+0=0+a=a\;\forall a\in F$ & (additive identity)\\
+$\forall a\in F\;\exists\;a^{-1}\;\mbox{ such that }\; a+a^{-1}=a^{-1}+a=0$ & (additive inverse)\\ 
+\end{tabular}
+\item A binary operation $: F\times F\rightarrow F$ with the following properties:
+\par
+\begin{tabular}{ll}
+$xy=yx\;\forall x,y\in F$ & (multiplicative commutativity)\\
+$x(yz)=(xy)z\;\forall x,y,z\in F$ & (multiplicative associativity)\\
+$\exists 1\in F\;\mbox{ such that } a1=1a=a\;\forall a\in F$ & (multiplicative identity)\\
+$\forall a\in F\setminus 0\;\exists\;a^{-1}\;\mbox{ such that }\; aa^{-1}=a^{-1}a=1$ & (multiplicative inverse)\\ 
+$x(y+z)=xy+xz\quad\forall x,y,z\in F$ & (distributive property)\\
+\end{tabular}
+\end{itemize}
+\end{definition*}
+\par\vspace{1 cm}
+\begin{definition*}[vector space] A \textbf{vector space} or \textbf{linear space} consists of:
+\begin{itemize}
+\item A field $F$ of elements called \textbf{scalars}
+\item A commutative group $V$ of elements called \textbf{vectors} with respect to a binary operation $+$
+\item A binary operation $:F\times V\rightarrow V$ called \textbf{scalar multiplication} that associates 
+with each scalar $\alpha\in F$ and vector $v\in V$ a vector $\alpha v$ in such a way that:
+\par
+\begin{tabular}{l}
+$1v=v\quad \forall v\in V$\\
+$(\alpha\beta)v=\alpha(\beta v)\quad\forall \alpha,\beta\in F,\;v\in V$\\
+$\alpha(v+w)=\alpha v+\alpha w\quad\forall\alpha\in F,\; v,w\in V$\\
+$(\alpha+\beta)v=\alpha v+\beta v\quad\forall \alpha,\beta\in F,\;v\in V$\\
+\end{tabular}
+\end{itemize}
+\end{definition*}
+\begin{definition*}[norm] A nonnegative real-valued function $\|\;\|:V\rightarrow\mathbb{R}$ is called a \textbf{norm} if:
+\begin{itemize}
+\item $\|v\|\geq 0\mbox{ and }\|v\|=0\;\Leftrightarrow\;v=\vec{0}$
+\item $\|v+w\|\leq\|v\|+\|w\|\quad$ (triangle inequality)
+\item $\|\alpha v\|=|\alpha|\,\|x\|\quad\forall\alpha\in F,\;v\in V$
+\end{itemize}
+\end{definition*}
+\par\vspace{1 cm}
+\begin{definition*}[normed linear space] 
+A linear space $V$ together with a norm $\|\cdot\|$, denoted by the pair $(V,\|\cdot\|$), is called a \textbf{normed linear space}
+\end{definition*}
+
+\begin{definition*}[inner product] Let the field $F$ be either $\mathbb{R}$ or $\mathbb{C}$ and a set $V$ of vectors which together with $F$ form a vector space.  An \textbf{inner product} on $V$ is a map 
+\[
+\cdot : V\times V\rightarrow\mathbb{F}
+\vspace{0.3 cm}
+\]
+with the following properties:
+\par\vspace{0.2 cm}
+\begin{tabular}{ll}
+$(u+v)\cdot w = u\cdot w\;+\;v\cdot w $ & $\forall u,v,w\in V$\\
+$(\alpha u)\cdot v=\alpha(u\cdot v)$ & $\forall \alpha\in F,\;u,v\in V$\\
+$u\cdot v = (\overline{v\cdot u})$  & $\forall u,v\in V$\\
+$u\cdot u\geq 0$ & $\forall u\in V$ with equality when $u=\vec{0}$\\ 
+\end{tabular}
+\par\vspace{0.3 cm}
+If the underlying field is $\mathbb{R}$, the fourth condition can be replaced by
+\par\vspace{0.2 cm}
+\begin{tabular}{ll}
+$u\cdot v = v\cdot u$  & $\forall u,v\in V$\\
+\end{tabular}
+\par\vspace{0.2 cm}
+since a real number is its own conjugate.  In this case, the condition just says the inner product is commutative.
+\end{definition*}
+\par\vspace{1 cm}
+\begin{definition*}[metric] A \textbf{metric} on a set $S$ is a function
+\[
+\rho:S\times S\rightarrow\mathbb{R}
+\vspace{0.3 cm}
+\]
+where $\rho$ has the following three properties for any $x,y,z\in S$: 
+\[
+\begin{array}{l}
+\rho(x,y)\geq0\;\mbox{ and } \rho(x,y)=0\Leftrightarrow x=y\\
+\rho(x,y)=\rho(y,x)\\
+\rho(x,y)\leq \rho(x,z)+\rho(z,y)\\
+\end{array}
+\vspace{0.3 cm}
+\]
+\end{definition*}
+\par\vspace{1 cm}
+\begin{definition*}[metric space] A \textbf{metric space} is a pair $\{S,\rho\}$ where $S$ is a set and $\rho$ is a metric defined on $S$.
+\end{definition*}
+\par\vspace{1 cm}
+\begin{definition*}[topology] A \textbf{topology} is a set $X$ and a collection $\mathcal{J}$ of subsets of $X$ having the following properties:
+\begin{itemize}
+\item $\emptyset$ and $X$ are in $\mathcal{J}$
+\item The union of any subcollection of elements of $\mathcal{J}$ belongs to $\mathbb{J}$
+\item The intersection of any \textit{finite} subcollection of $\mathcal{J}$ belongs to $\mathcal{J}$
+\end{itemize} 
+\end{definition*}
+
