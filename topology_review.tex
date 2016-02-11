@@ -74,3 +74,26 @@ $(\Rightarrow)$ Let $A\subseteq\mathbb{R}$ be open.  Suppose for the sake of con
 \par\vspace{0.3 cm}\noindent
 $(\Leftarrow)$ Now suppose $A\subseteq\mathbb{R}$ with $A^c$ closed.  Let $a$ be an element of $(A^c)^c=A$.  By hypothesis, $A^c$ is closed, so $a$ cannot be a limit point of $A^c$ because $a\notin A$.  By definition, this means there must be an $\epsilon>0$ such that $V_{\epsilon}(a)$ contains no points of $A^c$.  Therefore, $V_{\epsilon}(a)\subseteq A$.  Since $a$ was arbitrarily chosen, we can find an $\epsilon$-neighborhood of every element of $A$ that is entirely contained in $A$, so by definition $A$ is open.  
 \end{proof}
+\par\vspace{1 cm}
+\begin{theorem*}[Heine-Borel Theorem] A set $K\subseteq\mathbb{R}$ is compact if and only if it is closed and bounded.
+\end{theorem*}
+\begin{proof}
+$(\Rightarrow)$ Let $K\subseteq\mathbb{R}$ be compact.  Suppose for the sake of contradiction that $K$ is not bounded. By definition, for any $M\in\mathbb{R}$, there exists an element $x_M$ of $K$ with $|x_M|>M$.  We will use this fact to construct a sequence in $K$ that has no convergent subsequence.  If $K$ is unbounded, there must be an $x_1\in K$ with $|x_1|>1$.  By the same argument, there must be an element $x_2$ in $K$ with $|x_2|>2$.  Continuing in this fashion, we may construct a sequence
+\[
+x_1,x_2,x_3,\ldots,x_n,\ldots\quad\mbox{with}\quad |x_n|>n\quad\mbox{for every}\quad n\in\mathbb{N}
+\]   
+Now suppose $(x_{n_k})$ is a subsequence of $(x_n)$.  Since $|x_{n_k}|>n_k$ and $n_k$ is unbounded, every subsequence is unbounded.  Since all convergent sequences are bounded, this means that no subsequence is convergent, contradicting the assumption that $K$ is compact.
+\par\vspace{0.3 cm}
+This establishes that $K$ is bounded.  To show that $K$ is closed, suppose $x$ is a limit point of $K$.  Then there is a sequence $(x_n)$ in $K$ that converges to $x$.  By hypothesis, $K$ is compact, so by definition $(x_n)$ has a convergent subsequence whose limit is in $K$.  However, by an earlier theorem, any subsequence of a convergent sequence is also convergent, and has the same limit $x$.  Therefore both $(x_n)$ and its subsequence have the same limit, which must belong to $K$.  Since $x$ was arbitrarily chosen, this is true of any limit point, so $K$ must contain all of its limit points and therefore is closed.
+\par\vspace{0.3 cm}
+$(\Leftarrow)$ Now suppose $K$ is closed and bounded.  Let $(x_n)$ be an arbitrary sequence in $K$.  Then $(x_n)$ must be bounded, and by the Bolzano-Weierstrass theorem, it must have a convergent subsequence $(x_{n_k})$.  The limit of this subsequence is, by definition, a limit point of $K$, and by hypothesis $K$ is closed and therefore contains its limit points.  Therefore, every sequence in $K$ has a subsequence that converges to a point in $K$, and by definition, $K$ is compact.
+      
+\end{proof}
+\par\vspace{1 cm}
+\begin{theorem*} A set $E\subseteq\mathbb{R}$ is connected if and only if, for all nonempty disjoint sets $A$ and $B$ satisfying $E=A\cup B$ there always exists a convergent sequence $(x_n)\rightarrow x$ with $(x_n)$ contained in one of $A$ and $B$, and $x$ an element of the other.
+\end{theorem*}
+\begin{proof}
+$(\Rightarrow)$ Let $E$ be a connected set. Suppose $E=A\cup B$ where $A$ and $B$ are disjoint, nonempty sets.  By hypothesis, $E$ is connected, so $A$ and $B$ are not separated. This means that one of $A\cap\overline{B}$ and $\overline{A}\cap B$ is not empty.  Without loss of generality, assume that $x\in\overline{A}\cap B$.  Then $x\in\overline{A}$ and $x\in B$.  But $A$ and $B$ are disjoint, so $x\notin A$.  By definition, $\overline{A}$ is the union of $A$ and its limit points, and since $x\notin A$, $x$ must be a limit point of $A$.  By an earlier theorem, there is a sequence in $A$ that converges to $x$.    
+\par\vspace{1 cm}
+$(\Leftarrow)$ (contrapositive argument) Suppose $E\subseteq\mathbb{R}$ is disconnected.  We need to find two nonempty, disjoint sets $A$ and $B$ such that $E=A\cap B$ and there does not exist a convergent sequence $(x_n)$ in $A$ with its limit $x$ in $B$, or vice-versa.  By hypothesis, $E$ is separated, so there exist separated sets $A$ and $B$ with $E=A\cup B$. Now suppose $(x_n)$ is a convergent sequence contained in $A$ whose limit is $x$.  By definition, since $x$ is a limit of a sequence in $A$, $x$ belongs to $\overline{A}$. Because $A$ and $B$ are disconnected, by definition $\overline{A}\cap B$ is empty, so $x\notin B$.  Since $(x_n)$ was an arbitrary sequence, no convergent sequence in $A$ has its limit in $B$.  A similar argument shows that no convergent sequence in $B$ has its limit in $A$. 
+\end{proof}
