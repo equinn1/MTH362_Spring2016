@@ -97,3 +97,34 @@ $(\Rightarrow)$ Let $E$ be a connected set. Suppose $E=A\cup B$ where $A$ and $B
 \par\vspace{1 cm}
 $(\Leftarrow)$ (contrapositive argument) Suppose $E\subseteq\mathbb{R}$ is disconnected.  We need to find two nonempty, disjoint sets $A$ and $B$ such that $E=A\cap B$ and there does not exist a convergent sequence $(x_n)$ in $A$ with its limit $x$ in $B$, or vice-versa.  By hypothesis, $E$ is separated, so there exist separated sets $A$ and $B$ with $E=A\cup B$. Now suppose $(x_n)$ is a convergent sequence contained in $A$ whose limit is $x$.  By definition, since $x$ is a limit of a sequence in $A$, $x$ belongs to $\overline{A}$. Because $A$ and $B$ are disconnected, by definition $\overline{A}\cap B$ is empty, so $x\notin B$.  Since $(x_n)$ was an arbitrary sequence, no convergent sequence in $A$ has its limit in $B$.  A similar argument shows that no convergent sequence in $B$ has its limit in $A$. 
 \end{proof}
+\par\vspace{1 cm}
+\begin{definition*}[continuous function] In a metric space $(X,\rho)$ a function $f:D\subseteq X\rightarrow X$ is continuous if, for every $\epsilon>0$, there is a $\delta>0$ such that
+\[
+\rho(f(x),f(y))<\epsilon\quad\mbox{whenever}\quad\rho(x,y)<\delta
+\]
+\end{definition*}
+\par\vspace{1 cm}
+\begin{lemma*}
+If $(X,\rho)$ is a metric space and $f:D\subseteq X\rightarrow X$ is continuous, and $(x_n)$ is a convergent sequence in $D$ whose limit $x$ is also in $D$, then $\lim f(x_n)=f(x)$.
+\end{lemma*}
+\begin{proof}
+Let $\epsilon>0$ be given.  We need to show that there is an $N\in\mathbb{N}$ such that
+\[
+\rho(f(x_n),f(x))<\epsilon\quad\mbox{whenever}\quad n\geq N
+\]
+By hypothesis, $f$ is continuous, so by definition for every $\epsilon>0$, there is a $\delta>0$ such that
+\[
+\rho(f(x_n),f(x))<\epsilon\quad\mbox{whenever}\quad\rho(x,x_n)<\delta
+\]
+Also by hypothesis, $(x_n)$ is convergent with limit $x$, so by definition there is an $N\in\mathbb{N}$ such that 
+\[
+\rho(x_n,x)<\delta\quad\mbox{whenever}\quad n\geq N
+\]
+But by the continuity of $f$, this is equivalent to saying that $\rho(f(x_n),f(x))<\epsilon$ whenever $n\geq\mathbb{N}$.
+\end{proof}
+\par\vspace{1 cm}
+\begin{theorem*} If $f:\mathbb{R}\rightarrow\mathbb{R}$ and $K\subseteq\mathbb{R}$ is compact, then $f[K]$, the image of $K$ under $f$, is also compact.
+\end{theorem*}
+\begin{proof}
+Let $y_n$ be a sequence in $f[K]$.  By hypothesis, $y_n\in f[K]$ for each $n\in\mathbb{N}$ so there is at least one $x\in K$, call it $x_n$, with $f(x_n)=y_n$.  Because $K$ is compact, the sequence $(x_n)$ in $K$ must have a convergent subsequence $(x_{n_k})$ whose limit $x$ is in $K$. By the previous lemma, with the hypothesis that $f$ is continuous it must be true that that $(y_{n_k})$ is convergent with limit $y=f(x)$.  Since $(y_n)$ was an arbitrary sequence in $f(K)$, it follows that every sequence in $f(K)$ has a convergent subsequence whose limit is in $f(K)$, and therefore $f(K)$ is compact.     
+\end{proof}

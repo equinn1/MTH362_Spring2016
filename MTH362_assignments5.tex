@@ -1,0 +1,44 @@
+\subsection*{Teams 1 and 2} 
+\par\vspace{1 cm}
+\begin{problem*} [Arzela-Ascoli Theorem]
+\par\vspace{0.3 cm}
+For each $n\in\mathbb{N}$, let $f_n$ be a function defined on $[0,1]$.  If $(f_n)$ is bounded on $[0,1]$, i.e., if there exists
+an $M>0$ such that 
+\[
+|f_n(x)| \leq M\quad\mbox{for all}\quad n\in\mathbb{N}\quad\mbox{ane}\quad x\in[0,1]
+\]
+and if the collection $(f_n)$ is equicontinuous, show that $(f_n)$ contains a uniformly convergent subsequence.
+\par\vspace{0.3 cm}
+Part a):  Assume the results of problem 6.2.13 (2nd edition), which states the following:
+\par\vspace{0.3 cm}
+Let $A$ be a countable set $A=\{x_1,x_2,x_3,\ldots\}$.  For each $n\in\mathbb{N}$, let $h_n$ be a bounded, real-valued function defined on $A$.  Then there exists a subsequence of $(h_n)$ that converges pointwise on $A$.
+\par\vspace{0.3 cm}
+Show that there exists a subsequence of $(f_n)$ that converges pointwise at every rational point in $[0,1]$.  To simplify te notation, let
+\[
+g_k = f_{n_k}
+\]
+\par\vspace{0.3 cm}
+Part b): Let $\epsilon>0$ be given.  By hypothesis, $(f_n)$ is equicontinuous.  Argue that there exists a $\delta>0$ such that
+\[
+|g_k(x)-g_k(y)| < \frac{\epsilon}{3}\quad\mbox{whenever}\quad |x-y|<\delta\quad\mbox{for all}\quad k\in\mathbb{N} 
+\] 
+\par\vspace{0.3 cm}
+Part c): Using this delta, let $r_1,r_2,r_3,\ldots,r_n$ be a \textit{finite} collection of rational points with the property that 
+\[
+[0,1]\subseteq\bigcup_{i=1}^nV_{\delta}(r_i)
+\]
+(i.e., the union of the $\delta$-neighborhoods of the $r_i$ contains the entire interval $[0,1]$.
+\par\vspace{0.3 cm}
+Argue that there must exist an $N\in\mathbb{N}$ such that
+\[
+|g_s(r_i)-g_t(r_i)| < \frac{\epsilon}{3}\quad\mbox{for all}\quad s,t\geq N\quad\mbox{and}\quad r_i,\quad i=1,2,/ldots,n
+\]
+\par\vspace{0.3 cm}
+Part d): Complete the argument by showing that for arbitrary $x,y\in[0,1]$,
+\[
+|g_s(x)-g_t(y)| < \epsilon\quad\mbox{for all}\quad s,t\in\mathbb{N}
+\]
+\end{problem*}
+
+
+
