@@ -1,0 +1,103 @@
+\section{The Differentiable Limit Theorem}
+In this section we will show that if we start with a pointwise-convergent sequence of differentiable functions $f_n\rightarrow f$, and the sequence of derivatives  $(f'_n)$ converges uniformly to a function $g$, then $g$ is differentiable and $f'=g$.
+\par\vspace{0.5 cm}
+\begin{theorem*}[Differentiable Limit Theorem]  Let $f_n\rightarrow f$ pointwise on the closed interval $[a,b]$, and assume that each $f_n$ is differentiable.  If the sequence $(f'_n)\rightarrow g$ uniformly on $[a,b]$, then $f$ is differentiable and $f'=g$.
+\end{theorem*}
+\begin{proof}
+Choose a fixed $c\in[a,b]$.  To show that $f'(c)$ exists and is equal to $g(c)$, where
+\[
+f'(c) = \lim_{x\rightarrow c}\frac{f(x)-f(c)}{x-c}
+\]
+To show this, we need to show that
+\[
+\lim_{x\rightarrow c}\frac{f(x)-f(c)}{x-c} = g(c)
+\]
+(Note that this statement implies that $f'(c)$ exists and is equal to $g(c)$.)
+\par\vspace{0.5 cm}
+Let $\epsilon>0$ be given.  Then we need to show there exists a $\delta>0$ such that
+\[
+\left|\frac{f(x)-f(c)}{x-c} - g(c)\right| < \epsilon\quad\mbox{whenever}\quad 0<|x-c| <\delta
+\]
+As usual we employ a clever substitution and the triangle inequality:
+\[
+\left|\frac{f(x)-f(c)}{x-c} - g(c)\right| =  
+\]
+\[
+\left|\frac{f(x)-f(c)}{x-c} - \frac{f_n(x)-f_n(c)}{x-c} + \frac{f_n(x)-f_n(c)}{x-c} - f'_n(c) + f'_n(c) - g(c)\right|
+\]
+\[
+\left|\frac{f(x)-f(c)}{x-c} - g(c)\right| \leq \left|\frac{f(x)-f(c)}{x-c} - \frac{f_n(x)-f_n(c)}{x-c} \right| +
+\]
+\[
+\left|\frac{f_n(x)-f_n(c)}{x-c} - f'_n(c) \right| + \left|f'_n(c) - g(c)\right|
+\]
+This equality holds no matter what the value of $n\in\mathbb{N}$ is, i.e, it holds for every $n\in\mathbb{N}$.
+\par\vspace{0.5 cm}
+We will show that for any $\epsilon>0$, there exists an $N\in\mathbb{N}$ and a $\delta>0$ that makes each of the three terms on the right hand side less than $\epsilon/3$ when $0 < |x-c| < \delta$
+\par\vspace{0.5 cm}
+By hypothesis, $(f'_n)\rightarrow g$ uniformly on $[a,b]$, so by the definition of uniform convergence for sequences of functions, there is an $N_1\in\mathbb{N}$ such that
+\par\vspace{0.5 cm}
+\[
+\left|f'_n(c)-g(c)\right| < \frac{\epsilon}{3}\quad\mbox{whenever}\quad n\geq N_1\quad\mbox{for any}\quad c\in[a,b]
+\]
+\par\vspace{0.5 cm}
+Furthermore, the Cauchy criterion for uniform convergence, there is an $N_2\in\mathbb{N}$ such that
+\par\vspace{0.5 cm}
+\[
+\left|f'_m(x)-f'_n(x)\right| < \frac{\epsilon}{3}\quad\mbox{when}\quad m,n\geq N_2\quad\mbox{for every}\quad x\in[a,b]
+\]
+\par\vspace{0.5 cm}
+Let $N$ be the larger of $N_1$ and $N_2$. By hypothesis, $f_n$ is differentiable on $[a,b]$ for each $n$, so $f_N$ is differentiable, and so by definition
+\[
+\lim_{x\rightarrow c}\frac{f_N(c)-f_N(x)}{x-c} \rightarrow f'_N(c)
+\]
+\par\vspace{0.5 cm}
+for any $c\in[a,b]$, so for any $c$ there is a $\delta>0$ such that 
+\par\vspace{0.5 cm}
+\[
+\left|\frac{f_N(x)-f_N(c)}{x-c} - f'_N(c)\right| < \frac{\epsilon}{3}\quad\mbox{whenever}\quad 0 < |x-c| < \delta
+\]
+\par\vspace{0.5 cm}
+It remains to show that for this $\delta$ and this $N$,
+\par\vspace{0.5 cm} 
+\[
+\left|\frac{f(x)-f(c)}{x-c} - \frac{f_N(x)-f_N(c)}{x-c} \right| < \frac{\epsilon}{3}
+\]
+\par\vspace{0.5 cm}
+Let $x$ be any value for which $0 < |x-c| < \delta$.  Without loss of generality, assume $x>c$. By hypothesis, each $f_n$ is differentiable on $[a,b]$, so $f_N$ is differentiable on $[x,c]$, and we can apply the mean value theorem to the function $f_m-f_N$, where $m>N$, to establish that there is an $\alpha\in(x,c)$ such that
+\[
+f'_n(\alpha)-f'_N(\alpha) = \frac{(f_m(x)-f_N(x))-(f_m(c)-f_N(c))}{x-c}
+\]
+\par\vspace{0.5 cm}
+Our choice of $m$ and $N$ together with the Cauchy criterion for uniform convergence guarantees that
+\par\vspace{0.5 cm}
+\[
+\left|f'_n(\alpha)-f'_N(\alpha)\right| < \frac{\epsilon}{3}
+\]
+\par\vspace{0.5 cm}
+so by substitution
+\par\vspace{0.5 cm}
+\[
+\left|\frac{(f_m(x)-f_N(x))-(f_m(c)-f_N(c))}{x-c}\right| < \frac{\epsilon}{3}
+\]
+\par\vspace{0.5 cm}
+which we can write as
+\par\vspace{0.5 cm}
+\[
+\left|\frac{(f_m(x)-f_N(x))}{x-c}-\frac{(f_m(c)-f_N(c))}{x-c}\right| < \frac{\epsilon}{3}
+\]
+\par\vspace{0.5 cm}
+By hypothesis $f_n\rightarrow f$ so can apply the Order Limit Theorem to write 
+\par\vspace{0.5 cm}
+\[
+\left|\frac{(f(x)-f_N(x))}{x-c}-\frac{(f(c)-f_N(c))}{x-c}\right| \leq \frac{\epsilon}{3}
+\]
+\par\vspace{0.5 cm}
+Now we combine these results to write
+\[
+\left|\frac{f(x)-f(c)}{x-c} - g(c)\right| \leq \left|\frac{f(x)-f(c)}{x-c} - \frac{f_N(x)-f_N(c)}{x-c} \right| +
+\]
+\[
+\left|\frac{f_N(x)-f_N(c)}{x-c} - f'_n(c) \right| + \left|f'_N(c) - g(c)\right| < \frac{\epsilon}{3}+\frac{\epsilon}{3}+\frac{\epsilon}{3} = \epsilon
+\]
+\end{proof}
