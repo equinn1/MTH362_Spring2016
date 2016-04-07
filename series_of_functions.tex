@@ -1,0 +1,104 @@
+\section{Series of Functions}
+\begin{definition*}[pointwise convergence of a series] Let $f_n$ for each $n\in\mathbb{N}$ and $f$ be functions defined on a set $a\subseteq\mathbb{R}$.  The infinite series
+\[
+\sum_{n=1}^\infty f_n(x) = f_1(x)+f_2(x)+f_3(x)+\cdots
+\]
+converges pointwise on $A$ to $f(x)$ if the sequence $s_k(x)$ of partial sums,
+\[
+s_k(x) = f_1(x)+f_2(x)+\cdots+f_k(x)
+\] 
+converges pointwise to $f(x)$.
+\par\vspace{0.3 cm}
+The series converges uniformly to $f$ on $A$ if the sequence $s_k(x)$ converges uniformly to $f(x)$ on $A$. 
+\end{definition*}
+\par\vspace{0.4 cm}
+Adapting the Cauchy criterion for sequences of functions to series:
+\par\vspace{0.4 cm}
+\begin{theorem}[Cauchy Criterion for Uniform Convergence of Series] A series
+\[
+\sum_{n=1}^\infty f_n
+\]
+converges uniformly on $A\subseteq\mathbb{R}$ if and only if, for every $\epsilon>0$, there exists an $N\in\mathbb{N}$ such that 
+\[
+|f_{m+1}(x)+f_{m+2}(x)+\cdots+f_n(x)| < \epsilon \quad\mbox{whenever}\quad m,n\geq N\quad\mbox{for all}\quad x\in A
+\]
+\end{theorem}
+\par\vspace{0.4 cm}
+\begin{theorem}[Weierstrass M-Test] For each $n\in\mathbb{N}$, let $f_n$ be a function defined on a set $A\subseteq\mathbb{R}$, and let $M_n>0$ be a real number satisfying
+\[
+|f_n(x)| \leq M_n
+\]
+for all $x\in A$.  If
+\[
+\sum_{n=1}^\infty M_n
+\]
+converges, then
+\[
+\sum_{n=1}^\infty f_n
+\]
+converges uniformly on $A$.
+\end{theorem}
+\par\vspace{0.4 cm}
+\begin{proof}
+Suppose 
+\[
+\sum_{n=1}^\infty M_n
+\]
+converges.
+Let $\epsilon>0$ be given.  We need to show that there exists an $N\in\mathbb{N}$ such that
+\[
+|f_{m+1}(x)+f_{m+2}(x)+\cdots+f_n(x)| < \epsilon\quad\mbox{whenever}\quad m,n\geq N\quad\mbox{for all}\quad x\in A 
+\]
+By hypothesis, $\sum M_n$ converges, so by the Cauchy Criterion there is an $N\in\mathbb{N}$ such that
+\[
+M_{m+1}+M_{m+2}+\cdots+M_n < \epsilon\quad\mbox{whenever}\quad m,n \geq N
+\] 
+Then by the triangle inequality,
+\[
+|f_{m+1}(x)+f_{m+2}(x)+\cdots+f_n(x)| \leq |f_{m+1}(x)+f_{m+2}(x)+\cdots+f_{n-1}(x)|+|f_n(x)|
+\]
+\[
+\leq |f_{m+1}(x)+f_{m+2}(x)+\cdots+f_{n-1}(x)|+M_n  
+\]
+Applying the triangle inequality again gives
+\[
+|f_{m+1}(x)+f_{m+2}(x)+\cdots+f_n(x)| \leq |f_{m+1}(x)+f_{m+2}(x)+\cdots+f_{n-2}(x)|+M_{n-1}+M_n
+\]
+And eventually
+\[
+|f_{m+1}(x)+f_{m+2}(x)+\cdots+f_n(x)| \leq M_{m+1}+M_{m+2}+\cdots+M_n < \epsilon\quad\mbox{whenever}\quad m,n\geq N
+\]
+for all $x\in A$.
+\end{proof}
+\begin{definition}[power series] A function of the form
+\[
+f(x) = \sum_{n=0}^\infty a_nx^n = a_0+a_1x+a_2x^2+a_3x^3+\cdots
+\]
+is called a power series.
+\end{definition}
+\begin{theorem}
+The power series
+\[
+f(x) = \sum_{n=0}^\infty a_nx^n = a_0+a_1x+a_2x^2+a_3x^3+\cdots
+\]
+converges to $a_0$ if $x=0$.
+\end{theorem}
+\begin{proof}
+The result follows by substitution of $x=0$ into the power series:
+\[
+f(0) = \sum_{n=0}^\infty a_nx^n = a_0+0+0+0+\cdots
+\]
+\end{proof}
+\begin{theorem}
+If a power series
+\[
+\sum_{n=0}^\infty a_nx^n
+\]
+converges at some point $x_0\in\mathbb{R}$ then it converges for any $x$ satisfying
+\[
+|x| < |x_0|
+\]
+\end{theorem}
+\begin{proof}
+x
+\end{proof}
