@@ -94,11 +94,23 @@ If a power series
 \[
 \sum_{n=0}^\infty a_nx^n
 \]
-converges at some point $x_0\in\mathbb{R}$ then it converges for any $x$ satisfying
+converges at some point $x_0\in\mathbb{R}$ then it converges uniformly on the closed interval $[-c,c]$ where
 \[
-|x| < |x_0|
+c = |x_0|
 \]
 \end{theorem}
 \begin{proof}
-x
+Set
+\[
+M_n = |a_nx_0^n|
+\]
+By hypothesis, the series converges absolutely, so we can write
+\[
+\sum{n=0}^\infty |a_nx_0^n| = \sum_{n=0}^\infty M_n
+\]
+so $\sum M_n$ converges.  For any $x\in[-c,c]$,
+\[
+|a_nx^n|\leq|a_nx_0^n|= M_n
+\]
+so the Weierstrass M-test guarantees that $\sum_{x=0}^\infty a_nx^n$ converges uniformly on $[-c,c]$. 
 \end{proof}
